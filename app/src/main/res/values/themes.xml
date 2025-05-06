@@ -1,0 +1,103 @@
+<!-- res/values/themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Podstawowy motyw aplikacji (używa DayNight, żeby obsługiwać motyw systemowy) -->
+    <!-- Nazwa Theme.CASHMEINV3 spójna z bazowym stylem w styles.xml -->
+    <style name="Theme.CASHMEINV3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Definicje głównych kolorów, te same dla jasnego i ciemnego, jeśli DayNight sam nie zmienia -->
+        <item name="colorPrimary">@color/primaryColor</item> <!-- Główny kolor (np. paska akcji) -->
+        <item name="colorPrimaryVariant">@color/primaryVariant</item> <!-- Ciemniejszy wariant głównego koloru (np. pasek statusu) -->
+        <item name="colorOnPrimary">@color/button_text_color</item> <!-- Kolor tekstu/ikon na tle 'colorPrimary' -->
+        <item name="colorSecondary">@color/secondaryColor</item> <!-- Drugi kolor, akcentujący (np. dla FAB) -->
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item> <!-- Ciemniejszy wariant drugiego koloru -->
+        <item name="colorOnSecondary">@color/button_text_color</item> <!-- Kolor tekstu/ikon na tle 'colorSecondary' -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item> <!-- Kolor paska statusu (od API 21), bierze z 'colorPrimaryVariant' -->
+        <!-- Globalne zastosowanie stylu przycisku, jeśli chcemy, żeby wszystkie przyciski tak wyglądały domyślnie -->
+        <item name="materialButtonStyle">@style/Widget.CASHMEINV3.Button</item>
+    </style>
+
+    <!-- Konkretny Motyw Jasny -->
+    <!-- Nazewnictwo z podkreślnikiem spójne z tym, jak to rozróżniam w BaseActivity -->
+    <style name="Theme_CASHMEINV3_Light" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Definicje kolorów dla motywu jasnego -->
+        <item name="colorPrimary">@color/primaryColor</item> <!-- Główny kolor -->
+        <item name="colorPrimaryVariant">@color/primaryVariant</item> <!-- Ciemniejszy główny -->
+        <item name="colorOnPrimary">@color/button_text_color</item> <!-- Tekst na głównym tle -->
+        <item name="colorSecondary">@color/secondaryColor</item> <!-- Drugi kolor -->
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item> <!-- Ciemniejszy drugi -->
+        <item name="colorOnSecondary">@color/button_text_color</item> <!-- Tekst na drugim tle -->
+        <!-- Kolory specyficzne dla jasnego motywu -->
+        <item name="android:windowBackground">@color/backgroundLight</item> <!-- Tło okna (jasne) -->
+        <item name="colorSurface">@color/backgroundLight</item> <!-- Kolor powierzchni (np. kart), też jasne -->
+        <item name="colorOnSurface">@color/textColorPrimaryLight</item> <!-- Kolor tekstu na powierzchniach (ciemny na jasnym) -->
+        <item name="android:colorBackground">@color/backgroundLight</item> <!-- Główne tło (jasne) -->
+        <item name="colorError">#B00020</item> <!-- Kolor błędu (standardowy czerwony) -->
+        <item name="colorOnError">@color/white</item> <!-- Kolor tekstu na tle błędu (biały) -->
+        <item name="android:textColorPrimary">@color/textColorPrimaryLight</item> <!-- Główny kolor tekstu (ciemny) -->
+        <item name="android:textColorSecondary">@color/textHintColor</item> <!-- Drugorzędny kolor tekstu (np. podpowiedzi) -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item> <!-- Kolor paska statusu -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item> <!-- Ikony na pasku statusu mają być ciemne (od API 23) -->
+        <!-- Zastosowanie stylu przycisku -->
+        <item name="materialButtonStyle">@style/Widget.CASHMEINV3.Button</item>
+    </style>
+
+    <!-- Konkretny Motyw Ciemny -->
+    <!-- Nazewnictwo z podkreślnikiem spójne z BaseActivity -->
+    <style name="Theme_CASHMEINV3_Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Definicje kolorów dla motywu ciemnego -->
+        <item name="colorPrimary">@color/primaryColor</item> <!-- Główny kolor -->
+        <item name="colorPrimaryVariant">@color/primaryVariant</item> <!-- Ciemniejszy główny -->
+        <item name="colorOnPrimary">@color/button_text_color</item> <!-- Tekst na głównym tle -->
+        <item name="colorSecondary">@color/secondaryColor</item> <!-- Drugi kolor -->
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item> <!-- Ciemniejszy drugi -->
+        <item name="colorOnSecondary">@color/button_text_color</item> <!-- Tekst na drugim tle -->
+        <!-- Kolory specyficzne dla ciemnego motywu -->
+        <item name="android:windowBackground">@color/backgroundColor</item> <!-- Tło okna (ciemne) -->
+        <item name="colorSurface">@color/backgroundColor</item> <!-- Kolor powierzchni (np. kart), też ciemne -->
+        <item name="colorOnSurface">@color/textColorPrimary</item> <!-- Kolor tekstu na powierzchniach (jasny na ciemnym) -->
+        <item name="android:colorBackground">@color/backgroundColor</item> <!-- Główne tło (ciemne) -->
+        <item name="colorError">#CF6679</item> <!-- Kolor błędu (jaśniejszy czerwony dla ciemnego tła) -->
+        <item name="colorOnError">@color/black</item> <!-- Kolor tekstu na tle błędu (czarny) -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item> <!-- Główny kolor tekstu (jasny) -->
+        <item name="android:textColorSecondary">@color/textHintColor</item> <!-- Drugorzędny kolor tekstu -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item> <!-- Kolor paska statusu -->
+        <!-- W ciemnym motywie ikony paska statusu domyślnie są jasne (windowLightStatusBar=false) -->
+        <!-- Zastosowanie stylu przycisku -->
+        <item name="materialButtonStyle">@style/Widget.CASHMEINV3.Button</item>
+    </style>
+
+    <!-- Motyw Systemowy -->
+    <!-- Nazewnictwo z podkreślnikiem spójne z BaseActivity -->
+    <!-- Dziedziczy po moim bazowym motywie DayNight, więc sam się dostosuje -->
+    <style name="Theme_CASHMEINV3_System" parent="Theme.CASHMEINV3">
+        <!-- Zastosowanie stylu przycisku -->
+        <item name="materialButtonStyle">@style/Widget.CASHMEINV3.Button</item>
+        <!-- Nic więcej nie trzeba, bo DayNight sam ogarnia przełączanie -->
+    </style>
+
+    <!-- Motyw Wysokiego Kontrastu -->
+    <!-- Nazewnictwo z podkreślnikiem spójne z BaseActivity -->
+    <!-- Prosta wersja, głównie czarno-biała dla czytelności -->
+    <style name="Theme_CASHMEINV3_HighContrast" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Używam podstawowych kolorów Androida dla maksymalnego kontrastu -->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryVariant">@android:color/black</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@android:color/white</item>
+        <item name="colorSecondaryVariant">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorError">@android:color/white</item> <!-- Błąd jako biały -->
+        <item name="colorOnError">@android:color/black</item> <!-- Tekst na błędzie czarny -->
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- Główny tekst biały -->
+        <item name="android:textColorSecondary">#CCCCCC</item> <!-- Drugorzędny tekst (jasnoszary) -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/black</item> <!-- Pasek statusu czarny -->
+        <!-- Zastosowanie stylu przycisku -->
+        <!-- UWAGA: Domyślny styl przycisku może nie pasować do wysokiego kontrastu, trzeba by zrobić osobny styl -->
+        <item name="materialButtonStyle">@style/Widget.CASHMEINV3.Button</item>
+    </style>
+
+</resources>

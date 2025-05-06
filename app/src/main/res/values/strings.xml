@@ -1,0 +1,181 @@
+<resources>
+    <!-- Ogólne stringi aplikacji -->
+    <string name="app_name">CASHMEINV3</string> <!-- Nazwa aplikacji -->
+    <string name="app_logo">Logo aplikacji</string> <!-- Opis logo dla dostępności -->
+    <string name="app_title">$karbonetka</string> <!-- Tytuł aplikacji (może w headerze?) -->
+
+    <!-- ID klienta webowego Google API (z konsoli Firebase/Google Cloud) -->
+    <string name="default_web_client_id">453014390953-avqkb4gt5b65dj6kv892r97vp82norb3.apps.googleusercontent.com</string>
+
+
+    <!-- Konfiguracja SDK Facebooka (z panelu deweloperskiego FB) -->
+    <string name="facebook_app_id">2266639823692507</string> <!-- ID aplikacji FB -->
+    <string name="facebook_client_token">0b1e26a8425f66d5bb26e48cb0f7573f</string> <!-- Token klienta FB -->
+    <string name="fb_login_protocol_scheme">fb2266639823692507</string> <!-- Schemat protokołu logowania FB (fb + ID aplikacji) -->
+
+    <!-- ID domyślnego kanału powiadomień -->
+    <string name="default_notification_channel_id">default_channel</string>
+
+    <!-- Dolna nawigacja -->
+    <string name="home">Home</string> <!-- (Zostawione po angielsku? Można zmienić na "Start") -->
+    <string name="calendar">Kalendarz</string> <!-- Tekst dla zakładki Kalendarz -->
+    <string name="settings">Ustawienia</string> <!-- Tekst dla zakładki Ustawienia -->
+    <string name="camera">Camera</string> <!-- (Zostawione po angielsku? Można zmienić na "Aparat") -->
+
+    <!-- Logowanie i Rejestracja -->
+    <string name="enter_email">Wpisz Email</string> <!-- Podpowiedź w polu email -->
+    <string name="enter_password">Wpisz Hasło</string> <!-- Podpowiedź w polu hasło -->
+    <string name="log_in">Zaloguj</string> <!-- Tekst przycisku logowania -->
+    <string name="log_in_description">Zaloguj się na swoje konto</string> <!-- Opis przycisku logowania -->
+    <string name="register">Nowe Konto</string> <!-- Tekst przycisku rejestracji -->
+    <string name="register_description">Stwórz nowe konto</string> <!-- Opis przycisku rejestracji -->
+    <string name="log_in_google">Zaloguj się przez Google</string> <!-- Tekst przycisku logowania Google -->
+    <string name="log_in_facebook">Zaloguj się przez Facebook</string> <!-- Tekst przycisku logowania Facebook -->
+    <string name="forgot_password">Przypomnij Hasło</string> <!-- Tekst linku do resetowania hasła -->
+    <string name="google_sign_in">Użyj</string> <!-- Tekst przy ikonce Google (może 'Kontynuuj z Google'?) -->
+    <string name="facebook_sign_in">Użyj</string> <!-- Tekst przy ikonce Facebooka (może 'Kontynuuj z Facebook'?) -->
+    <string name="google_logo">Logo Google</string> <!-- Opis logo Google dla dostępności -->
+    <string name="facebook_logo">Logo Facebook</string> <!-- Opis logo Facebooka dla dostępności -->
+
+    <!-- HomeActivity (Ekran główny/budżetu) -->
+    <string name="monthly_budget_input">Wprowadź miesięczny DOCHÓD</string> <!-- Etykieta pola dochodu -->
+    <string name="monthly_budget_hint">Miesięczny dochód</string> <!-- Podpowiedź w polu dochodu -->
+    <string name="monthly_expenses_input">Wprowadź miesięczne PLANOWANE WYDATKI</string> <!-- Etykieta pola celu wydatków -->
+    <string name="expenses_hint">Planowane wydatki</string> <!-- Podpowiedź w polu celu wydatków -->
+    <string name="calculate_budget">Zapisz budżet</string> <!-- Tekst przycisku zapisu budżetu -->
+    <string name="daily_budget">Dzisiejszy budżet: %1$.2f PLN</string> <!-- (Nazwa używana w starym XMLu wydatków) - Format wyświetlania dziennego budżetu -->
+    <string name="savings">Zaoszczędziłeś: %1$.2f PLN</string> <!-- (Nazwa używana w starym XMLu wydatków) - Format wyświetlania oszczędności -->
+    <string name="scan_receipt">Skanuj paragon</string> <!-- Tekst przycisku skanowania -->
+    <!-- >> DODANY TEN STRING << -->
+    <string name="home_expenses_button_label">Wydatki</string> <!-- Tekst przycisku przejścia do Wydatków -->
+
+    <!-- CalendarActivity (Ekran Kalendarza) -->
+    <string name="selected_date_text">Wybrana data: %1$s</string> <!-- Tekst pokazujący wybraną datę (%1$s = data) -->
+    <string name="daily_result_display">Wynik dnia: %1$s</string> <!-- Tekst pokazujący wynik dnia (%1$s = kwota +/-) -->
+    <string name="error_loading_calendar_data">Błąd podczas ładowania danych kalendarza.</string> <!-- Komunikat błędu ładowania danych -->
+    <string name="savings_display">Wyświetl oszczędności</string> <!-- (ODKOMENTOWANE) - Tekst przycisku? -->
+
+    <!-- ExpensesActivity (Ekran Wydatków): Teksty Przycisków -->
+    <string name="show_expenses">Pokaż wydatki</string> <!-- Nadal potrzebne dla ExpensesActivity (przycisk pokazania listy) -->
+    <string name="hide_expenses_button_text">Ukryj wydatki</string> <!-- Tekst przycisku ukrycia listy -->
+    <string name="add_product">Dodaj produkt</string> <!-- Tekst przycisku pokazania formularza dodawania -->
+    <string name="confirm_add_product">Potwierdź dodanie</string> <!-- Tekst przycisku potwierdzenia dodania -->
+    <string name="delete_item">Usuń</string> <!-- Tekst przycisku usuwania (lub opis dla dostępności) -->
+
+    <!-- ExpensesActivity: Etykiety / Podpowiedzi w polach tekstowych -->
+    <string name="product_name_hint">Nazwa produktu</string> <!-- Podpowiedź w polu nazwy produktu -->
+    <string name="product_price_hint">Cena produktu (PLN)</string> <!-- Podpowiedź w polu ceny -->
+    <string name="product_category_hint">Kategoria produktu</string> <!-- (ODKOMENTOWANE) - Etykieta spinnera kategorii? -->
+    <string name="category_prompt">Wybierz kategorię</string> <!-- Tekst podpowiedzi w spinnerze kategorii -->
+
+    <!-- ExpensesActivity: Formaty Wyświetlania -->
+    <string name="daily_budget_remaining">Pozostało dzisiaj: %1$.2f PLN</string> <!-- Używane przez kod Javy do wyświetlania pozostałego budżetu -->
+    <string name="monthly_income_display">Dochód mies.: %1$.2f PLN</string> <!-- Używane przez kod Javy do wyświetlania dochodu -->
+    <string name="previous_day_rollover_display">Przeniesiono z wczoraj: %1$.2f PLN</string> <!-- Używane przez kod Javy do wyświetlania rollovera -->
+    <string name="total_expenses_display">Pozycje: %1$d, Łączna wartość: %2$.2f PLN</string> <!-- Używane przez kod Javy do wyświetlania sumy wydatków (%1$d = liczba, %2$.2f = kwota) -->
+    <string name="total_scanned_value_text">Łączna wartość zeskanowanych przedmiotów: %1$.2f PLN</string> <!-- (ODKOMENTOWANE) - Chyba nieużywane? Podobne do powyższego -->
+    <string name="savings_text">Zaoszczędziłeś: %1$.2f PLN</string> <!-- (ODKOMENTOWANE) - Format wyświetlania oszczędności -->
+    <string name="daily_budget_text">Dzisiejszy budżet: %1$.2f PLN</string> <!-- (ODKOMENTOWANE) - Format wyświetlania dziennego budżetu -->
+    <string name="daily_budget_after_expenses_text">Dzisiejszy budżet po wydatkach: %1$.2f PLN</string> <!-- (ODKOMENTOWANE) - Format wyświetlania budżetu po wydatkach -->
+    <string name="monthly_budget">Dochód mies.: %1$.2f PLN</string>  <!-- (Nazwa używana w starym XMLu wydatków) - Format wyświetlania dochodu -->
+    <string name="scanned_items">Pozycje: %1$d, Łączna wartość: %2$.2f PLN</string> <!-- (Nazwa używana w starym XMLu wydatków) - Format wyświetlania zeskanowanych itemów -->
+
+    <!-- ExpensesActivity: Komunikaty Błędów / Informacyjne -->
+    <string name="error_getting_image_bitmap">Błąd: Nie udało się uzyskać obrazu.</string> <!-- Błąd pobierania bitmapy -->
+    <string name="error_camera_data_extras">Błąd: Brak danych z aparatu.</string> <!-- Błąd braku danych z aparatu -->
+    <string name="error_camera_launch">Nie można uruchomić aparatu.</string> <!-- Błąd uruchamiania aparatu -->
+    <string name="error_no_camera_app">Brak dostępnej aplikacji aparatu.</string> <!-- Błąd braku apki aparatu -->
+    <string name="error_processing_image">Błąd przetwarzania obrazu.</string> <!-- Ogólny błąd przetwarzania obrazu -->
+    <string name="error_no_text_recognized">Nie rozpoznano żadnego tekstu.</string> <!-- Błąd, gdy ML Kit nic nie znalazł -->
+    <string name="error_text_recognition_failed">Błąd rozpoznawania tekstu: </string> <!-- Początek komunikatu błędu ML Kit -->
+    <string name="error_receipt_items_not_found">Nie znaleziono pozycji na paragonie.</string> <!-- Gdy parser nic nie wyciągnął -->
+    <string name="toast_items_added">Dodano %1$d pozycji o wartości %2$.2f PLN.</string> <!-- Potwierdzenie dodania po skanowaniu -->
+    <string name="error_product_name_price_required">Nazwa i cena produktu są wymagane.</string> <!-- Błąd walidacji przy dodawaniu ręcznym -->
+    <string name="error_price_must_be_positive">Cena produktu musi być dodatnia.</string> <!-- Błąd walidacji ceny -->
+    <string name="error_invalid_price_format">Nieprawidłowy format ceny (użyj np. 10.50).</string> <!-- Błąd formatu ceny -->
+    <string name="error_loading_items_list">Błąd ładowania listy przedmiotów.</string> <!-- Błąd ładowania listy z SharedPreferences -->
+    <string name="error_deleting_item">Błąd usuwania pozycji.</string> <!-- Błąd przy usuwaniu produktu z listy -->
+    <string name="error_loading_item">Błąd ładowania danych</string> <!-- Błąd ładowania pojedynczego elementu (np. w adapterze) -->
+    <string name="error_inflating_view">Błąd tworzenia widoku listy</string> <!-- Błąd tworzenia widoku elementu listy -->
+    <string name="toast_product_added">Produkt \'%1$s\' dodany.</string> <!-- Potwierdzenie ręcznego dodania produktu -->
+
+    <!-- ExpensesActivity: Wartości Domyślne -->
+    <string name="default_item_name">Produkt bez nazwy</string> <!-- Domyślna nazwa, jak nie da się sparsować -->
+    <string name="default_category_other">Inne</string> <!-- Domyślna kategoria -->
+    <string name="default_category_scanned">Zeskanowane</string> <!-- Kategoria dla produktów z paragonu -->
+    <string name="default_scanned_item_name">Zeskanowany Produkt</string> <!-- (ODKOMENTOWANE) - Domyślna nazwa dla skanowanych? -->
+
+
+    <!-- HomeActivity: Komunikaty Toast/Błędy -->
+    <string name="toast_save_budget_success">Zapisano miesięczny dochód i planowane wydatki.</string> <!-- Potwierdzenie zapisu budżetu -->
+    <string name="toast_input_required">Wprowadź obie wartości: dochód i planowane wydatki.</string> <!-- Błąd walidacji pól budżetu -->
+    <string name="toast_invalid_number_format">Nieprawidłowy format liczb (użyj np. 4000 lub 1000.50).</string> <!-- Błąd formatu liczb w budżecie -->
+    <string name="toast_income_positive">Dochód musi być dodatni. Wydatki nie mogą być ujemne.</string> <!-- Błąd walidacji wartości budżetu -->
+    <string name="toast_camera_permission_denied">Odmówiono dostępu do kamery.</string> <!-- Gdy user odmówi pozwolenia na aparat -->
+    <string name="toast_camera_not_available">Brak dostępnej aplikacji aparatu.</string> <!-- Gdy nie ma apki aparatu -->
+    <string name="toast_scan_not_recommended_home">Skanowanie paragonu w tym miejscu jest niezalecane.</string> <!-- (ODKOMENTOWANE) - Sugeruje, że skanowanie tu nie działa? -->
+    <string name="toast_recognize_text_home_not_recommended">Rozpoznano tekst (implementacja w HomeActivity niezalecana).</string> <!-- (ODKOMENTOWANE) - Sugeruje, że logika ML Kit tu nie pasuje? -->
+    <string name="error_initialization_home">Wystąpił błąd podczas uruchamiania aplikacji.</string> <!-- Ogólny błąd startu HomeActivity -->
+
+
+    <!-- Stringi Powiadomień -->
+    <string name="notification_channel_name">Podsumowania Miesięczne</string> <!-- Nazwa kanału w ustawieniach systemu -->
+    <string name="notification_channel_description">Powiadomienia z podsumowaniem oszczędności.</string> <!-- Opis kanału w ustawieniach systemu -->
+    <string name="monthly_summary_notification_title">Podsumowanie miesiąca: %1$s %2$d</string> <!-- Tytuł powiadomienia (%1$s=miesiąc, %2$d=rok) -->
+    <string name="monthly_summary_notification_text">Całkowity wynik: %1$s</string> <!-- Treść powiadomienia (%1$s=kwota +/-) -->
+    <string name="notification_permission_denied">Odmówiono pozwolenia na powiadomienia. Podsumowania nie będą wysyłane.</string> <!-- Gdy user odmówi pozwolenia (Android 13+) -->
+    <string name="cannot_send_notification_permission">Nie można wysłać powiadomienia - brak pozwolenia.</string> <!-- Gdy próbujemy wysłać bez pozwolenia -->
+    <string name="error_sending_notification">Błąd podczas wysyłania powiadomienia.</string> <!-- Ogólny błąd wysyłania -->
+    <string name="notification_permission_granted">Zezwolono na powiadomienia.</string> <!-- Potwierdzenie przyznania pozwolenia -->
+
+
+    <!-- Tablica Kategorii (do spinnera w ExpensesActivity) -->
+    <string-array name="categories_array">
+        <item>@string/category_prompt</item> <!-- Pierwszy element - podpowiedź -->
+        <item>Jedzenie</item>
+        <item>Napoje</item> <!-- (ODKOMENTOWANE) -->
+        <item>Transport</item>
+        <item>Rachunki</item>
+        <item>Rozrywka</item>
+        <item>Ubrania</item>
+        <item>Dom</item> <!-- (ODKOMENTOWANE) -->
+        <item>Zdrowie</item>
+        <item>@string/default_category_other</item> <!-- Kategoria "Inne" -->
+        <item>@string/default_category_scanned</item> <!-- Kategoria "Zeskanowane" -->
+    </string-array>
+
+    <!-- Opcje Językowe (do spinnera w SettingsActivity) -->
+    <string-array name="language_options">
+        <item>English</item> <!-- Angielski -->
+        <item>Polish</item> <!-- Polski -->
+        <item>Spanish</item> <!-- Hiszpański -->
+        <item>French</item> <!-- Francuski -->
+    </string-array>
+
+    <!-- ********** START: Stringi dla SettingsActivity ********** -->
+    <!-- Etykiety Ustawień -->
+    <string name="setting_notifications_label">Powiadomienia</string> <!-- Etykieta dla przełącznika powiadomień -->
+    <string name="setting_sound_label">Dźwięk</string> <!-- Etykieta dla przełącznika dźwięku -->
+    <string name="setting_language_label">Język</string> <!-- Etykieta dla spinnera języka -->
+    <string name="setting_theme_label">Motyw</string> <!-- Etykieta dla grupy przycisków motywu -->
+
+    <!-- Opcje Ustawień -->
+    <string name="setting_on">WŁ</string> <!-- Tekst dla stanu "Włączone" (np. na przełączniku) -->
+    <string name="setting_off">WYŁ</string> <!-- Tekst dla stanu "Wyłączone" -->
+    <string name="theme_light">Jasny</string> <!-- Nazwa opcji motywu jasnego -->
+    <string name="theme_dark">Ciemny</string> <!-- Nazwa opcji motywu ciemnego -->
+    <string name="theme_system">Systemowy</string> <!-- Nazwa opcji motywu systemowego -->
+    <string name="theme_high_contrast">Wysoki kontrast</string> <!-- Nazwa opcji motywu wysokiego kontrastu -->
+
+    <!-- Teksty Przycisków -->
+    <string name="button_logout">Wyloguj</string> <!-- Tekst przycisku wylogowania -->
+    <string name="button_save">Zapisz</string> <!-- Tekst przycisku zapisania ustawień -->
+
+    <!-- Komunikaty Toast -->
+    <string name="settings_saved">Ustawienia zapisane</string> <!-- Potwierdzenie zapisu (bez restartu) -->
+    <string name="settings_saved_restarting">Ustawienia zapisane. Stosowanie zmian…</string> <!-- Potwierdzenie zapisu (z restartem) -->
+    <string name="error_saving_settings">Błąd zapisu ustawień.</string> <!-- Błąd podczas zapisywania -->
+    <string name="settings_no_changes">Nie wprowadzono zmian w ustawieniach.</string> <!-- Gdy user kliknie "Zapisz", a nic nie zmienił -->
+    <!-- ********** KONIEC: Stringi dla SettingsActivity ********** -->
+
+</resources>

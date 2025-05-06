@@ -1,0 +1,220 @@
+Index: local_history1.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/local_history1.patch b/local_history1.patch
+new file mode 100644
+--- /dev/null	(date 1746571262463)
++++ b/local_history1.patch	(date 1746571262463)
+@@ -0,0 +1,210 @@
++Index: app/.gitignore
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/app/.gitignore b/app/.gitignore
++--- a/app/.gitignore	
+++++ b/app/.gitignore	(date 1746571201088)
++@@ -1,33 +1,1 @@
++-# Gradle files
++-.gradle/
++-build/
++-
++-# Local configuration file (sdk path, etc)
++-local.properties
++-
++-# Log/OS Files
++-*.log
++-
++-# Android Studio generated files and folders
++-captures/
++-.externalNativeBuild/
++-.cxx/
++-*.apk
++-output.json
++-
++-# IntelliJ
++-*.iml
++-.idea/
++-misc.xml
++-deploymentTargetDropDown.xml
++-render.experimental.xml
++-
++-# Keystore files
++-*.jks
++-*.keystore
++-
++-# Google Services (e.g. APIs or Firebase)
++-google-services.json
++-
++-# Android Profiling
++-*.hprof
++\ No newline at end of file
+++/build
++Index: .gitignore
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.gitignore b/.gitignore
++--- a/.gitignore	
+++++ b/.gitignore	(date 1746571201084)
++@@ -1,15 +1,32 @@
++-*.iml
++-.gradle
++-/local.properties
++-/.idea/caches
++-/.idea/libraries
++-/.idea/modules.xml
++-/.idea/workspace.xml
++-/.idea/navEditor.xml
++-/.idea/assetWizardSettings.xml
++-.DS_Store
++-/build
++-/captures
++-.externalNativeBuild
++-.cxx
+++# Gradle files
+++.gradle/
+++build/
+++
+++# Local configuration file (sdk path, etc)
++ local.properties
+++
+++# Log/OS Files
+++*.log
+++
+++# Android Studio generated files and folders
+++captures/
+++.externalNativeBuild/
+++.cxx/
+++*.apk
+++output.json
+++
+++# IntelliJ
+++*.iml
+++.idea/
+++misc.xml
+++deploymentTargetDropDown.xml
+++render.experimental.xml
+++
+++# Keystore files
+++*.jks
+++*.keystore
+++
+++g
+++
+++# Android Profiling
+++*.hprof
++\ No newline at end of file
++Index: local_history.patch
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/local_history.patch b/local_history.patch
++new file mode 100644
++--- /dev/null	(date 1746571224750)
+++++ b/local_history.patch	(date 1746571224750)
++@@ -0,0 +1,100 @@
+++Index: app/.gitignore
+++IDEA additional info:
+++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+++<+>UTF-8
+++===================================================================
+++diff --git a/app/.gitignore b/app/.gitignore
+++--- a/app/.gitignore	
++++++ b/app/.gitignore	(date 1746571201088)
+++@@ -1,33 +1,1 @@
+++-# Gradle files
+++-.gradle/
+++-build/
+++-
+++-# Local configuration file (sdk path, etc)
+++-local.properties
+++-
+++-# Log/OS Files
+++-*.log
+++-
+++-# Android Studio generated files and folders
+++-captures/
+++-.externalNativeBuild/
+++-.cxx/
+++-*.apk
+++-output.json
+++-
+++-# IntelliJ
+++-*.iml
+++-.idea/
+++-misc.xml
+++-deploymentTargetDropDown.xml
+++-render.experimental.xml
+++-
+++-# Keystore files
+++-*.jks
+++-*.keystore
+++-
+++-# Google Services (e.g. APIs or Firebase)
+++-google-services.json
+++-
+++-# Android Profiling
+++-*.hprof
+++\ No newline at end of file
++++/build
+++Index: .gitignore
+++IDEA additional info:
+++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+++<+>UTF-8
+++===================================================================
+++diff --git a/.gitignore b/.gitignore
+++--- a/.gitignore	
++++++ b/.gitignore	(date 1746571201084)
+++@@ -1,15 +1,32 @@
+++-*.iml
+++-.gradle
+++-/local.properties
+++-/.idea/caches
+++-/.idea/libraries
+++-/.idea/modules.xml
+++-/.idea/workspace.xml
+++-/.idea/navEditor.xml
+++-/.idea/assetWizardSettings.xml
+++-.DS_Store
+++-/build
+++-/captures
+++-.externalNativeBuild
+++-.cxx
++++# Gradle files
++++.gradle/
++++build/
++++
++++# Local configuration file (sdk path, etc)
+++ local.properties
++++
++++# Log/OS Files
++++*.log
++++
++++# Android Studio generated files and folders
++++captures/
++++.externalNativeBuild/
++++.cxx/
++++*.apk
++++output.json
++++
++++# IntelliJ
++++*.iml
++++.idea/
++++misc.xml
++++deploymentTargetDropDown.xml
++++render.experimental.xml
++++
++++# Keystore files
++++*.jks
++++*.keystore
++++
++++g
++++
++++# Android Profiling
++++*.hprof
+++\ No newline at end of file

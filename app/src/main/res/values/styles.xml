@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tu trzymam tylko style dla konkretnych widżetów, żeby nie mieszać z motywami -->
+
+    <!-- ================================== -->
+    <!-- == Style, które już były (moje?) == -->
+    <!-- ================================== -->
+
+    <!-- Ogólny styl dla moich przycisków w apce -->
+    <style name="Widget.CASHMEINV3.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonBackground</item> <!-- Tło przycisku, wziąłem z kolorów -->
+        <item name="android:textColor">@color/white</item> <!-- Tekst na przycisku, standardowo biały -->
+        <item name="android:textSize">18sp</item> <!-- Rozmiar tekstu, taki sam jak 'duży' -->
+        <item name="cornerRadius">8dp</item> <!-- Żeby rogi były trochę zaokrąglone -->
+        <item name="android:fontFamily">@font/roboto_medium</item> <!-- Używam Roboto Medium, wygląda spoko -->
+        <!-- TODO: Może dodać tu minHeight dla pewności? (tak jak w Material) -->
+        <!-- <item name="android:minHeight">@dimen/min_touch_target</item> --> <!-- Żeby łatwiej było trafić palcem (min. 48dp) -->
+    </style>
+
+    <!-- Style dla tego widoku kalendarza z biblioteki -->
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="android:firstDayOfWeek">2</item> <!-- Ustawiam poniedziałek jako pierwszy dzień tygodnia (bo 2 to pon.) -->
+    </style>
+
+    <!-- Jak ma wyglądać tekst zwykłej daty w komórce kalendarza -->
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/text_color_secondary</item> <!-- Kolor tekstu, dopasowany do reszty (na jasnym tle) -->
+        <item name="android:weekNumberColor">@color/text_color_secondary</item> <!-- Kolor numeru tygodnia, też dopasowany -->
+        <item name="android:textSize">16sp</item> <!-- Rozmiar cyferek daty -->
+    </style>
+
+    <!-- Jak ma wyglądać tekst daty, którą user kliknął -->
+    <style name="CalenderViewDateCustomTextSelected" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item> <!-- Kolor tekstu na tle zaznaczenia (biały na głównym kolorze) -->
+        <item name="android:textStyle">bold</item> <!-- Pogrubiony, żeby się wyróżniał -->
+        <item name="android:textSize">18sp</item> <!-- Trochę większy tekst dla zaznaczonej daty -->
+    </style>
+
+    <!-- Jak mają wyglądać skróty dni tygodnia (Pn, Wt, ...) na górze -->
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/text_color_secondary</item> <!-- Kolor tekstu, znowu ten sam co reszta -->
+        <item name="android:textStyle">bold</item> <!-- Też pogrubione dla czytelności -->
+        <item name="android:textSize">14sp</item> <!-- Mniejszy rozmiar dla tych skrótów -->
+    </style>
+
+    <!-- MOTYWY (np. ciemny/jasny) są teraz w pliku themes.xml! -->
+
+
+    <!-- =================================================== -->
+    <!-- == Style dodane specjalnie dla ekranu Ustawień == -->
+    <!-- =================================================== -->
+
+    <!-- Styl dla tekstu opisującego opcję w Ustawieniach (np. "Powiadomienia") -->
+    <style name="SettingsLabelText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item> <!-- Szerokość 0dp, bo używam wagi (layout_weight) -->
+        <item name="android:layout_height">wrap_content</item> <!-- Wysokość standardowo dopasowana -->
+        <item name="android:layout_weight">1</item> <!-- Waga 1, żeby etykieta zajęła dostępną szerokość obok przełącznika -->
+        <item name="android:fontFamily">@font/roboto_medium</item> <!-- Ta sama czcionka co w przyciskach -->
+        <item name="android:textColor">@color/textPrimaryOnLight</item> <!-- Kolor tekstu zdefiniowany w colors.xml -->
+        <item name="android:textSize">@dimen/text_size_setting_label</item> <!-- Rozmiar tekstu dla etykiety, wzięty z wymiarów -->
+        <item name="android:gravity">center_vertical</item> <!-- Tekst wyśrodkowany w pionie wewnątrz TextView -->
+        <item name="android:layout_gravity">center_vertical</item> <!-- Całe TextView wyśrodkowane w pionie w kontenerze (np. LinearLayout) -->
+        <item name="android:minHeight">@dimen/min_touch_target</item> <!-- Minimalna wysokość, żeby cały wiersz miał co najmniej 48dp (dobra praktyka) -->
+    </style>
+
+    <!-- Styl dla miejsca, gdzie jest przełącznik/spinner w Ustawieniach -->
+    <style name="SettingsActionContainer">
+        <item name="android:layout_width">wrap_content</item> <!-- Szerokość dopasowana do kontrolki (np. przełącznika) -->
+        <item name="android:layout_height">wrap_content</item> <!-- Wysokość też dopasowana -->
+        <item name="android:layout_gravity">center_vertical</item> <!-- Wyśrodkowane w pionie obok etykiety -->
+    </style>
+
+    <!-- Styl dla przycisków "Zapisz" i "Wyloguj" w Ustawieniach -->
+    <!-- Podobny do mojego ogólnego przycisku, ale używa kolorów zdefiniowanych dla motywu -->
+    <style name="SettingsButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item> <!-- Szerokość na całą dostępną przestrzeń -->
+        <item name="android:layout_height">wrap_content</item> <!-- Wysokość standardowo -->
+        <item name="backgroundTint">@color/colorPrimary</item> <!-- Tło przycisku - główny kolor aplikacji -->
+        <item name="android:textColor">@color/colorOnPrimary</item> <!-- Kolor tekstu na przycisku - biały na głównym kolorze -->
+        <item name="android:fontFamily">@font/roboto_medium</item> <!-- Ta sama czcionka Roboto Medium -->
+        <item name="android:textSize">@dimen/text_size_large</item> <!-- Rozmiar tekstu, standardowy duży -->
+        <item name="android:layout_marginTop">@dimen/spacing_medium</item> <!-- Trochę odstępu od góry -->
+        <item name="android:layout_marginBottom">@dimen/spacing_medium</item> <!-- Trochę odstępu od dołu -->
+        <item name="android:minHeight">@dimen/min_touch_target</item> <!-- Minimalna wysokość dla łatwego klikania -->
+        <item name="cornerRadius">8dp</item> <!-- Zaokrąglenie rogów, tak jak w moim głównym stylu przycisku -->
+    </style>
+
+</resources>

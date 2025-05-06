@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "453014390953",
+    "project_id": "cashmeinv3",
+    "storage_bucket": "cashmeinv3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453014390953:android:8d1ceb6198f35b6f1781b8",
+        "android_client_info": {
+          "package_name": "com.example.cashmeinv3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453014390953-90v0de312tqpa3j0h6pr4uhgsc69dgng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cashmeinv3",
+            "certificate_hash": "415bf2b32fc2095af2d9d64342061040a51055e8"
+          }
+        },
+        {
+          "client_id": "453014390953-avqkb4gt5b65dj6kv892r97vp82norb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUc-Kts8zeBBLvvuCsrBhn5e15JIGCy6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453014390953-avqkb4gt5b65dj6kv892r97vp82norb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

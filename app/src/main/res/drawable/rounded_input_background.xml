@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the shape as a rounded rectangle -->
+    <solid android:color="#F5F5F5" /> <!-- Light grey background to resemble the screenshot -->
+    <corners android:radius="30dp" /> <!-- Rounded corners to create a pill-like shape -->
+    <stroke
+        android:width="2dp"
+        android:color="#D1D1D1" /> <!-- Light border to match the look -->
+    <padding
+        android:left="16dp"
+        android:top="8dp"
+        android:right="16dp"
+        android:bottom="8dp" />
+</shape>

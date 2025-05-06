@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- == Kolory, które już były w projekcie == -->
+    <!-- ============================================ -->
+
+    <!-- Standardowe kolory z Material Design (te fiolety i turkusy) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Moje pierwotne kolory, które sobie zdefiniowałem -->
+    <color name="textColor">#FFFFFF</color> <!-- Ogólny kolor tekstu, na razie biały -->
+    <color name="textHintColor">#757575</color> <!-- Kolor podpowiedzi (hint) w polach EditText, taki szarawy -->
+    <color name="black">#000000</color> <!-- Czarny, wiadomo -->
+    <color name="white">#FFFFFF</color> <!-- Biały, też wiadomo -->
+    <color name="primaryColor">#007B7F</color> <!-- Mój główny kolor aplikacji -->
+    <color name="primaryVariant">#005A5D</color> <!-- Ciemniejszy wariant głównego koloru -->
+    <color name="secondaryColor">#00796B</color> <!-- Drugi kolor, do akcentów -->
+    <color name="secondaryVariant">#004D40</color> <!-- Ciemniejszy wariant drugiego koloru -->
+    <color name="backgroundColor">#07202D</color> <!-- Główny kolor tła (ciemny) -->
+    <color name="backgroundLight">#FFFFFF</color> <!-- Jasne tło (pewnie do trybu jasnego albo kart) -->
+    <color name="backgroundDark">#000000</color> <!-- Ciemne tło (chyba nieużywane, skoro mam backgroundColor?) -->
+    <color name="textColorPrimary">#FFFFFF</color> <!-- Główny kolor tekstu (na ciemnym tle) -->
+    <color name="textColorPrimaryLight">#000000</color> <!-- Główny kolor tekstu (na jasnym tle) -->
+    <color name="textColorPrimaryDark">#FFFFFF</color> <!-- Główny kolor tekstu (na ciemnym tle - duplikat?) -->
+    <color name="contrastPrimary">#000000</color> <!-- Do kontrastu? Czarny -->
+    <color name="contrastPrimaryDark">#212121</color> <!-- Ciemny kontrast -->
+    <color name="contrastSecondary">#FFFFFF</color> <!-- Drugi kontrast? Biały -->
+    <color name="contrastSecondaryDark">#EEEEEE</color> <!-- Jasnoszary kontrast -->
+    <color name="buttonBackground">#007B7F</color> <!-- Tło przycisku (ten sam co primaryColor) -->
+
+    <!-- Kolory dodane później (przeze mnie?) -->
+    <color name="text_color_primary">#FFFFFF</color> <!-- Główny kolor tekstu (znowu biały?) -->
+    <color name="text_color_secondary">#001219</color> <!-- Drugorzędny kolor tekstu (używany do tekstu na jasnym tle) -->
+    <color name="button_color">#007B7F</color> <!-- Kolor przycisku (jak primaryColor i buttonBackground) -->
+    <color name="button_text_color">#FFFFFF</color> <!-- Kolor tekstu na przycisku (biały) -->
+    <color name="hint_color">#757575</color> <!-- Kolor podpowiedzi (jak textHintColor) -->
+    <color name="edit_text_underline_color">#007B7F</color> <!-- Kolor podkreślenia w EditText (główny kolor apki) -->
+
+    <!-- Kolor dla nieaktywnych dni w kalendarzu -->
+    <color name="disabled_day_color">#A9A9A9</color> <!-- Szary -->
+
+    <!-- ==================================================== -->
+    <!-- == Aliasy/Definicje dla nowego layoutu/stylów == -->
+    <!-- ==================================================== -->
+    <!-- Chodzi o to, żeby w nowych stylach używać bardziej opisowych nazw, -->
+    <!-- a te nazwy mapuję tutaj na moje istniejące kolory. -->
+
+    <!-- Tło dla całego ekranu -->
+    <color name="appBackground">@color/backgroundColor</color> <!-- Używam mojego ciemnego tła #07202D -->
+
+    <!-- Kolor tekstu używany na ciemnym tle (jak appBackground) -->
+    <color name="textPrimaryOnDark">@color/textColorPrimary</color> <!-- Używam mojego białego tekstu #FFFFFF -->
+
+    <!-- Kolor tekstu/ikon dla elementów dolnej nawigacji -->
+    <!-- Używam czarnego, tak jak było w pierwotnym layoucie (app:itemIconTint) -->
+    <color name="bottomNavItemColor">@color/black</color> <!-- Używam #000000 -->
+
+    <!-- Tło dla karty ustawień -->
+    <color name="settingsCardBackground">@color/backgroundLight</color> <!-- Używam mojego jasnego tła #FFFFFF -->
+
+    <!-- Kolor tekstu używany na jasnym tle (jak settingsCardBackground) -->
+    <!-- Używam text_color_secondary, bo tak było w pierwotnym tekście ustawień -->
+    <color name="textPrimaryOnLight">@color/text_color_secondary</color> <!-- Używam #001219 -->
+
+    <!-- Główny kolor aplikacji, często używany do tła przycisków, tintowania -->
+    <!-- Mapuję na mój primaryColor -->
+    <color name="colorPrimary">@color/primaryColor</color> <!-- Używam #007B7F -->
+
+    <!-- Kolor tekstu/ikon umieszczanych na głównym kolorze -->
+    <!-- Mapuję na mój button_text_color -->
+    <color name="colorOnPrimary">@color/button_text_color</color> <!-- Używam #FFFFFF -->
+
+</resources>

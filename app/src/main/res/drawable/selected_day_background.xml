@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">  <!-- Or use "rectangle" for a square -->
+    <solid android:color="@color/text_color_secondary" /> <!-- Your selected background color -->
+    <size android:width="40dp" android:height="40dp"/> <!-- Adjust size as needed -->
+</shape>

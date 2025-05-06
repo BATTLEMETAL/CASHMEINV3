@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    android:padding="@dimen/spacing_large"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="@dimen/title_text_size"
+        android:textColor="@color/textPrimaryOnDark"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_large" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@drawable/rounded_bottom_navigation"
+        android:elevation="8dp"
+        android:padding="@dimen/spacing_medium"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottomNavItemColor"
+        app:itemTextColor="@color/bottomNavItemColor"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/settingsScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_background_white"
+        android:padding="@dimen/padding_large"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/settingsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:minHeight="@dimen/min_touch_target">
+
+                <TextView
+                    style="@style/SettingsLabelText"
+                    android:text="@string/setting_notifications_label"/>
+
+                <!-- *** USING SwitchCompat *** -->
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/notificationSwitch"
+                    style="@style/SettingsActionContainer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:minHeight="@dimen/min_touch_target">
+
+                <TextView
+                    style="@style/SettingsLabelText"
+                    android:text="@string/setting_sound_label"/>
+
+                <!-- *** USING SwitchCompat *** -->
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/soundSwitch"
+                    style="@style/SettingsActionContainer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/min_touch_target"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SettingsLabelText"
+                    android:text="@string/setting_language_label"/>
+
+                <Spinner
+                    android:id="@+id/languageSpinner"
+                    style="@style/SettingsActionContainer"
+                    android:minWidth="100dp"
+                    android:layout_height="@dimen/min_touch_target"
+                    android:entries="@array/language_options"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsLabelText"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0"
+                    android:text="@string/setting_theme_label"
+                    android:layout_marginBottom="@dimen/spacing_medium">
+                </TextView>
+
+                <RadioGroup
+                    android:id="@+id/themeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/themeLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/min_touch_target"
+                        android:textColor="@color/textPrimaryOnLight"
+                        android:textSize="@dimen/text_size_medium"
+                        android:text="@string/theme_light"/>
+
+                    <RadioButton
+                        android:id="@+id/themeDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/min_touch_target"
+                        android:textColor="@color/textPrimaryOnLight"
+                        android:textSize="@dimen/text_size_medium"
+                        android:text="@string/theme_dark"/>
+
+                    <RadioButton
+                        android:id="@+id/themeSystem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/min_touch_target"
+                        android:textColor="@color/textPrimaryOnLight"
+                        android:textSize="@dimen/text_size_medium"
+                        android:text="@string/theme_system"/>
+
+                    <RadioButton
+                        android:id="@+id/themeHighContrast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/min_touch_target"
+                        android:textColor="@color/textPrimaryOnLight"
+                        android:textSize="@dimen/text_size_medium"
+                        android:text="@string/theme_high_contrast"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Use fully qualified name for Space -->
+            <android.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutButton"
+                style="@style/SettingsButton"
+                android:text="@string/button_logout" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveSettingsButton"
+                style="@style/SettingsButton"
+                android:text="@string/button_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
