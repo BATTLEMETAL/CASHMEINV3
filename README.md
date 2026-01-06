@@ -1,90 +1,78 @@
-# SmartBudget-OCR (2024) - Budget Management App
+# SmartBudget-OCR (Engineering Thesis)
 
-`$karbonetka` is a sophisticated Android application, developed as an engineering thesis project, designed to offer a robust and intuitive solution for personal budget management. It features secure multi-provider authentication, an intelligent daily budget engine, OCR-powered receipt scanning, a visual calendar for financial history, customizable themes, and is supported by Google AdMob.
+**SmartBudget-OCR** (formerly known as *$karbonetka*) is a sophisticated Android application developed as an engineering thesis project. It offers a robust and intuitive solution for personal budget management, featuring secure multi-provider authentication, an intelligent daily budget engine, OCR-powered receipt scanning, and detailed financial analytics.
 
 ## ✨ Key Features
 
 This application is built with a focus on security, automation, user experience, and personalization.
 
 ### 🔐 Secure & Flexible Authentication
-The application is secured by a robust authentication system powered by **Firebase Authentication**, providing users with multiple ways to sign in.
-*   **Multiple Sign-In Options:** Users can register and log in using their email and password, or use their existing **Google** or **Facebook** accounts for quick and easy access.
-*   **Account Management:** Includes essential features like new user registration and a **password reset** function for email-based accounts.
-*   **Seamless Transition:** Upon successful authentication, the user is immediately taken to the main `HomeActivity`, and the login screen is removed from the back stack for a smooth user experience.
+The application is secured by a robust authentication system powered by **Firebase Authentication**.
+*   **Multiple Sign-In Options:** Support for Email/Password, **Google**, and **Facebook** login.
+*   **Account Management:** Includes registration and a **password reset** function.
+*   **Seamless Transition:** Successful login creates a seamless user experience by managing the back stack properly via `HomeActivity`.
 
-### 🏡 Main Dashboard (Home Screen)
-The Home screen is the app's central control panel where you set your financial goals.
-*   **Set Your Budget:** Define your **total monthly income** and your **monthly expense target**. These two values are the foundation for all of the app's automated calculations.
-*   **Smart Updates:** When you save a new budget, the app intelligently flags that a change has been made, prompting an automatic recalculation of your daily spending allowance.
-
-### 💰 Intelligent Budgeting Engine
-The core of the app is a dynamic daily budgeting system that helps you stay on track.
-*   **Dynamic Daily Allowance:** Based on the goals you set, the app calculates a unique spending allowance for each day.
-*   **Rollover System:** Unspent funds from one day are automatically carried over to the next. Overspending reduces the next day's budget, promoting financial discipline.
-*   **End-of-Day Processing:** At the start of each new day, the app automatically calculates and saves the previous day's net financial result (surplus or deficit).
-
-### 🗓️ Financial History Calendar
-Visualize your financial performance over time with an interactive calendar.
-*   **Visual Interface:** Uses the `Material Calendar View` library to provide a clean way to browse past dates.
-*   **Daily Performance Review:** Tap on any past day to see your final net financial result—either the amount you saved or overspent.
+### 🏡 Main Dashboard & Budgeting
+The core of the app is a dynamic daily budgeting system.
+*   **Smart Updates:** Define your total monthly income and expense targets. The app intelligently flags changes and prompts automatic recalculation.
+*   **Dynamic Daily Allowance:** Based on goals, the app calculates a unique spending allowance for each day.
+*   **Rollover System:** Unspent funds are automatically carried over to the next day, while overspending reduces the future budget to promote financial discipline.
 
 ### 📸 OCR-Powered Receipt Scanning
-Effortlessly digitize your paper receipts.
-*   **Flexible Input:** Scan receipts in real-time using the device **camera** or import an existing picture from your phone's **gallery**.
-*   **Google ML Kit Integration:** Utilizes Google's powerful on-device Machine Learning for fast and accurate text recognition.
-*   **Intelligent Parsing:** Implements custom regular expressions (`RegEx`) tailored to parse common Polish receipt formats, automatically itemizing products and their final prices.
+Effortlessly digitize paper receipts using on-device Machine Learning.
+*   **Google ML Kit Integration:** Utilizes Google's powerful on-device ML for fast and accurate text recognition.
+*   **Intelligent Parsing:** Implements custom `RegEx` algorithms tailored to parse common receipt formats, automatically itemizing products and prices.
 
-### 🎨 Customizable User Interface
-Personalize the application's appearance to your preference.
-*   **Theme Support:** Choose between a **Light Theme**, a **Dark Theme** (default), or have the app automatically follow your device's **System Settings**.
-*   **Consistent Experience:** A centralized `BaseActivity` ensures that your chosen theme is applied consistently across all screens.
+### 🗓️ Financial History & Analytics
+*   **Visual Calendar:** Uses `Material Calendar View` to browse past financial performance.
+*   **Daily Review:** Tap on any date to view the net financial result (surplus or deficit).
 
-### Monetization
-*   **Google AdMob:** The application is integrated with Google AdMob to display ads, supporting the project's continued development.
+### 🎨 Customizable UI
+*   **Theme Support:** Light Theme, Dark Theme (default), or System Default.
+*   **Consistent Design:** A centralized `BaseActivity` architecture ensures consistent theming across the entire application.
 
 ## 🛠️ Technology Stack
 
-*   **Languages:** A hybrid project utilizing **Java** and **Kotlin**.
-*   **Platform:** **Android SDK** (Minimum Version: SDK 24 / Android 7.0 Nougat).
-*   **Architecture:** A `BaseActivity` approach for centralized theme management.
-*   **UI Components:**
-    *   **Material Components for Android**
-    *   **Material Calendar View (by Applandeo)**
-*   **Machine Learning:**
-    *   **Google ML Kit Text Recognition**
-*   **Data Handling:**
-    *   **Gson**
-*   **Authentication & Backend:**
-    *   **Firebase Authentication**
-    *   **Google Sign-In for Android**
-    *   **Facebook SDK for Android**
-    *   **Firebase Analytics**
-*   **Monetization:**
-    *   **Google AdMob**
+*   **Languages:** Java (Core Logic), Kotlin (Extensions).
+*   **Platform:** Android SDK (Min SDK: 24 / Android 7.0).
+*   **Architecture:** MVC / BaseActivity Pattern (Classic Android Architecture).
+*   **Machine Learning:** Google ML Kit Text Recognition.
+*   **Backend & Auth:** Firebase (Authentication, Firestore, Analytics).
+*   **Libraries:**
+    *   Material Components for Android
+    *   Material Calendar View (Applandeo)
+    *   Gson
+    *   Retrofit / OkHttp
+    *   MPAndroidChart (Data Visualization)
 
 ## 🚀 Getting Started
 
-To get a local copy up and running, follow these simple steps.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-*   **Android Studio** (latest version recommended).
-*   An **Android Emulator** or a physical **Android device** (API 24+).
+*   **Android Studio** (Latest version recommended).
+*   **Android Device/Emulator** (API 24+).
 
 ### Installation
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/your-repository-name.git
+    git clone https://github.com/BATTLEMETAL/SmartBudget-OCR.git
     ```
 2.  **Open the project in Android Studio.**
+    Let the Gradle sync finish downloading dependencies.
+
 3.  **Configure Firebase:**
+    > **Note:** The internal package name is `com.example.cashmeinv3`. You must use this exact package name in the Firebase Console.
     *   Go to the [Firebase Console](https://console.firebase.google.com/).
     *   Create a new project.
-    *   Add a new Android application to your project. Ensure the package name is `com.example.cashmeinv3`.
-    *   Download the generated `google-services.json` file and place it in the project's `app/` directory.
-    *   In the Firebase console, navigate to the **Authentication -> Sign-in method** tab and enable the **Email/Password**, **Google**, and **Facebook** providers.
-4.  **Sync Gradle Files.**
-    *   Android Studio should automatically prompt you to sync. If not, go to `File > Sync Project with Gradle Files`.
-5.  **Build and Run the application.**
-    *   Select your target device and click the 'Run' button (▶).
+    *   Add an Android app with package name: `com.example.cashmeinv3`.
+    *   Download `google-services.json` and place it in the project's `app/` directory.
+    *   Enable **Email/Password**, **Google**, and **Facebook** in the *Authentication* tab.
+
+4.  **Build and Run:**
+    *   Select your target device and click **Run** (▶).
+
+---
+*Created by Michał Zalewski*
