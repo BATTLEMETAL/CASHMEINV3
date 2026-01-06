@@ -1,4 +1,4 @@
-# $karbonetka (2024) - Budget Management App
+# SmartBudget-OCR (2024) - Budget Management App
 
 `$karbonetka` is a sophisticated Android application, developed as an engineering thesis project, designed to offer a robust and intuitive solution for personal budget management. It features secure multi-provider authentication, an intelligent daily budget engine, OCR-powered receipt scanning, a visual calendar for financial history, customizable themes, and is supported by Google AdMob.
 
